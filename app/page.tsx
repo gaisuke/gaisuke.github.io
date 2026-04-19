@@ -1,9 +1,9 @@
 import Nav from "@/components/nav";
 import Hero from "@/components/hero";
 import Experience from "@/components/experience";
-import Skill from "@/components/skill";
 import Projects from "@/components/projects";
 import Contact from "@/components/contact";
+import Wakatime from "@/components/wakatime";
 
 export default function Home() {
   return (
@@ -12,7 +12,7 @@ export default function Home() {
       <main>
         <Hero />
         <Experience />
-        <Skill />
+        <Wakatime />
         <Projects />
         <Contact />
       </main>
