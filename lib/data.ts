@@ -6,6 +6,7 @@ export const profile = {
   email: "danimu.inbox@gmail.com",
   github: "github.com/gaisuke",
   wakatime: "wakatime.com/@gaisuke",
+  medium: "medium.com/@danimunf"
 };
 
 export const experiences = [
