@@ -39,6 +39,17 @@ export default function Contact() {
                     </a>
                 </div>
                 <div className="flex items-center justify-between border-t border-zinc-100 pt-3">
+                    <span className="text-xs text-zinc-400">Medium</span>
+                    <a
+                        href={`https://${profile.medium}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm text-zinc-600 hover:text-zinc-900 transition-colors"
+                    >
+                        {profile.medium}
+                    </a>
+                </div>
+                <div className="flex items-center justify-between border-t border-zinc-100 pt-3">
                     <span className="text-xs text-zinc-400">Location</span>
                     <span className="text-sm text-zinc-600">{profile.location}</span>
                 </div>
