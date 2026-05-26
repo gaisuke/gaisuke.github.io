@@ -7,8 +7,8 @@ export default function Nav() {
                 <span className="text-sm font-medium">{profile.name}</span>
                 <div className="flex gap-6">
                     {
-                        ["experience", "projects", "contact"].map((s) => (
-                            <a key={s} href={`#${s}`} className="text-xs text-zinc-400 hover:text-sinc-900 transition-colors">
+                        ["experience", "reflections", "projects", "contact"].map((s) => (
+                            <a key={s} href={`#${s}`} className="text-xs text-zinc-400 hover:text-zinc-900 transition-colors">
                                 {s}
                             </a>
                         ))
