@@ -66,3 +66,66 @@ export const projects = [
     stack: ["Go", "REST API", "RAG", "AI Integration", "OCR", "Vector DB"]
   },
 ];
+
+export const reflections = [
+    {
+      title: "Saya Baru Sadar: Ini Bukan Capek Biasa",
+      description: "Beberapa sprint terakhir, pace development di tim saya lagi kencang-kencangnya.",
+      date: "Apr 1, 2026",
+      url: "https://medium.com/@danimunf/saya-baru-sadar-ini-bukan-capek-biasa-ccb069f32659",
+    },
+    {
+      title: "Mendelegasikan Pekerjaan Bukanlah Tanda Kelemahan",
+      description: "Tulisan kali ini mungkin tidak terlalu eksplisit tentang engineering atau software development.",
+      date: "Mar 28, 2026",
+      url: "https://medium.com/@danimunf/mendelegasikan-pekerjaan-bukanlah-tanda-kelemahan-54a6cafe18c4",
+    },
+    {
+      title: "Best Practices Itu Panduan, Bukan Kitab Suci",
+      description: "Ada satu fase dalam hidup saya sebagai software engineer di mana saya mulai sangat peduli dengan sesuatu yang disebut best practices.",
+      date: "Mar 24, 2026",
+      url: "https://medium.com/@danimunf/best-practices-itu-panduan-bukan-kitab-suci-73fde82236dd",
+    },
+    {
+      title: "Nulis yang Penting? Yang Penting Nulis",
+      description: "Sebuah refleksi tentang kenapa menulis itu tetap penting, meski terasa sulit untuk memulai.",
+      date: "Mar 18, 2024",
+      url: "https://medium.com/@danimunf/nulis-yang-penting-yang-penting-nulis-e2c1f734aad4",
+    },
+    {
+      title: "What I Know About Him from Injury Time",
+      description: "A reflection written in the nick of time — on people, moments, and what lingers after.",
+      date: "Apr 13, 2023",
+      url: "https://medium.com/@danimunf/what-i-know-about-him-from-injury-time-90b4589be1df",
+    },
+    {
+      title: "Lessons from Moments of Uncertainty",
+      description: "I thought I lost them, for a second…",
+      date: "Apr 12, 2023",
+      url: "https://medium.com/@danimunf/lessons-from-moments-of-uncertainty-f15f8ef41629",
+    },
+    {
+      title: "Belum Cukup Sempurna, Masih Banyak Salah",
+      description: "Entah darimana saya harus memulai tulisan ini.",
+      date: "Apr 10, 2023",
+      url: "https://medium.com/@danimunf/belum-cukup-sempurna-masih-banyak-salah-f97deb305e02",
+    },
+    {
+      title: "The Struggle of Self-Doubt and Perfectionism in Writing",
+      description: "On the invisible barriers that keep writers from hitting publish.",
+      date: "Apr 9, 2023",
+      url: "https://medium.com/@danimunf/the-struggle-of-self-doubt-and-perfectionism-in-writing-f81a613545a8",
+    },
+    {
+      title: "Tak Kenal, Maka Kenalan",
+      description: "Sebuah refleksi 6 bulan merantau (pertama kali) ke Bandung.",
+      date: "Apr 8, 2023",
+      url: "https://medium.com/@danimunf/tak-kenal-maka-kenalan-a457d458172a",
+    },
+    {
+      title: "Asynchronous Communication in a Nutshell",
+      description: "As a new eFisherian, I'm grateful for the privilege of async communication and remote work.",
+      date: "Apr 5, 2023",
+      url: "https://medium.com/@danimunf/asynchronous-communication-in-a-nutshell-7971546e511",
+    },
+  ];

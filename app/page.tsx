@@ -4,6 +4,7 @@ import Experience from "@/components/experience";
 import Projects from "@/components/projects";
 import Contact from "@/components/contact";
 import Wakatime from "@/components/wakatime";
+import Blogs from "@/components/blogs";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         <Hero />
         <Experience />
         <Wakatime />
+        <Blogs />
         <Projects />
         <Contact />
       </main>
