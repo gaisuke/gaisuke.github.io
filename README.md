@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Akhmad Dani Munif — Portfolio Website
 
-## Getting Started
+A premium, elegant, and minimal developer portfolio showcasing engineering experience, projects, live coding stats, and personal writing. Built using a modern, performant, and type-safe front-end architecture.
 
-First, run the development server:
+---
 
+## 🚀 Tech Stack
+
+- **Core Framework**: [Next.js](https://nextjs.org/) (App Router, Turbopack)
+- **Programming Language**: [TypeScript](https://www.typescriptlang.org/) (Strictly typed data schemas)
+- **Styling Engine**: [Tailwind CSS v4](https://tailwindcss.com/) (Fluid design and utility-first layout tokens)
+- **Typography**: Vercel's [Geist Sans & Geist Mono](https://vercel.com/font) (Highly readable sans-serif and monospace font stacks)
+
+---
+
+## ✨ Features
+
+### 1. Minimalist & Premium Design System
+- Sleek dark and light mode harmony utilizing `bg-white`, `text-zinc-900`, and subtle `text-zinc-500` shades.
+- Elegant micro-interactions and smooth transition animations on all links, project cards, and navigation headers.
+
+### 2. Live Coding Activity Integration (`/components/wakatime.tsx`)
+- Integrates directly with WakaTime's public data endpoints to dynamically query real-time coding language stats.
+- Renders an advanced, interactive GitHub-style **Activity Grid** (`/components/activity-grid.tsx`) mapping coding intensity across the last 365 days.
+- Designed with height-preserving safety locks to protect against Next.js hydration mismatches.
+
+### 3. Dynamic Reflections Feed (`/components/blogs.tsx`)
+- Pulls from a curated collection of Medium articles (stored in the centralized type-safe dataset at `/lib/data.ts`).
+- Employs a custom client-side shuffle algorithm to show a random set of exactly **three** articles upon every fresh page mount.
+- Features a height-preserving transparent skeleton layout to completely eliminate Cumulative Layout Shift (CLS) and ensure a flawless pre-rendering and hydration score.
+
+---
+
+## 🛠️ Development and Scripts
+
+Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
+
+### Run Development Server
+To launch the Turbopack development server locally:
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+Open [http://localhost:3000](http://localhost:3000) in your browser to view the portfolio.
+
+### Build for Production
+To generate a fully optimized, statically generated production bundle:
+```bash
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Code Quality & Linting
+To inspect the code for potential bugs and formatting alignment:
+```bash
+npm run lint
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📂 Project Structure
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```text
+├── app/
+│   ├── layout.tsx         # App layout with Geist font configurations
+│   ├── page.tsx           # Home entrypoint rendering portfolio modules
+│   └── globals.css        # Global CSS importing Tailwind v4
+├── components/
+│   ├── nav.tsx            # Sticky blurring navigation header
+│   ├── hero.tsx           # Headline and digital contact information
+│   ├── experience.tsx     # Work experience history layout
+│   ├── wakatime.tsx       # Live Wakatime API wrapper
+│   ├── activity-grid.tsx  # Dynamic 365-day coding density grid map
+│   ├── blogs.tsx          # Dynamic Reflections Grid with client-side shuffling
+│   ├── projects.tsx       # Showcased projects grid
+│   └── contact.tsx        # Structured footer contact list
+├── lib/
+│   └── data.ts            # Centralized type-safe portfolio data schemas
+└── public/                # Static public asset directories
+```
