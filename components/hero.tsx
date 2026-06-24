@@ -9,6 +9,7 @@ export default function Hero() {
                 <span>{profile.location}</span>
                 <a href={`mailto:${profile.email}`} className="hover:text-zinc-900 transition-colors">{profile.email}</a>
                 <a href={`https://${profile.github}`} target="_blank" rel="noopener noreferrer" className="hover:text-zinc-900 transition-colors">{profile.github}</a>
+                <a href={profile.resumeUrl} target="_blank" rel="noopener noreferrer" download className="hover:text-zinc-900 transition-colors">Download this Resume (PDF) ↗</a>
             </div>
         </section>
     );

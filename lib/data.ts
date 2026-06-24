@@ -6,7 +6,8 @@ export const profile = {
   email: "danimu.inbox@gmail.com",
   github: "github.com/gaisuke",
   wakatime: "wakatime.com/@gaisuke",
-  medium: "medium.com/@danimunf"
+  medium: "medium.com/@danimunf",
+  resumeUrl: "/Akhmad-Dani-Munif-Resume.pdf"
 };
 
 export const experiences = [
@@ -16,8 +17,8 @@ export const experiences = [
     type: "Contract",
     period: "Jun 2025 – Present",
     description:
-      "Backend microservices for BRI's flagship mobile banking app (BRIMO), focusing on investment product infrastructure.",
-    stack: ["Go", "MySQL", "Redis", "Kafka", "RabbitMQ", "OpenShift"],
+      "Backend microservices for Qita by BRI, BRI's flagship mobile banking app, within the Investment Squad — building investment product infrastructure.",
+    stack: ["Go", "MySQL", "Redis", "Kafka", "RabbitMQ", "REST", "OpenShift"],
   },
   {
     "title": "Learning Mentor & Assistant Tutor - Programming/Software Development",
@@ -42,6 +43,22 @@ export const experiences = [
     "period": "Jun 2022 – Oct 2024",
     "description": "Fullstack engineer building internal dashboards and backend services for marketing and referral initiatives. Led promo bulk creation system, developed referral dashboard and onboarding flows, and integrated promo automation with referral systems.",
     "stack": ["Go", "PostgreSQL", "React", "NextJS", "TypeScript", "Refine", "Vite", "TailwindCSS"]
+  },
+  {
+    "title": "Frontend Web Developer",
+    "company": "Sunartha Putra Mandiri",
+    "type": "Freelance",
+    "period": "Oct 2021 – Jun 2022",
+    "description": "Developed and maintained the client-side infrastructure of a custom Enterprise Resource Planning (ERP) application, building features from system analyst requirements and ensuring a smooth, responsive interface across all screen sizes.",
+    "stack": ["ReactJS", "MaterialUI", "TypeScript", "Webpack", "TailwindCSS", "Swagger"]
+  },
+  {
+    "title": "Frontend Web Developer",
+    "company": "MatchKerja",
+    "type": "Freelance",
+    "period": "Feb 2021 – Aug 2021",
+    "description": "Re-engineered the platform's core web appearance from a legacy template into a fully customized web application, migrating template-based designs into reusable React components and integrating backend APIs for a cohesive, responsive experience.",
+    "stack": ["ReactJS", "MaterialUI", "Laravel", "Blade", "Alpine", "TailwindCSS", "Livewire", "MySQL"]
   }
 ];
 
@@ -49,13 +66,35 @@ export const skills = [
   // Languages & Runtimes
   "Go", "TypeScript", "JavaScript", "PHP",
   // Frontend
-  "React", "Next.js", "TailwindCSS", "HTML", "CSS",
+  "React", "Next.js", "TailwindCSS", "Sass/Less", "Bootstrap", "HTML", "CSS",
   // Backend
-  "Node.js", "Express", "Spring Boot", "Laravel",
+  "Node.js", "Express", "Spring Boot", "Laravel", "Livewire",
   // Databases
   "PostgreSQL", "MySQL", "Redis",
   // Infrastructure & Tooling
   "Kafka", "RabbitMQ", "Docker", "Nginx", "OpenShift",
+];
+
+export const languages = [
+  { name: "English", level: "Fluent" },
+  { name: "Bahasa Indonesia", level: "Native" },
+];
+
+export const education = [
+  {
+    school: "Jember University",
+    degree: "Bachelor of Computer Science; Major in Information System",
+    location: "Jember, ID",
+    period: "Jan 2022",
+    details:
+      "GPA 3.58/4.0 · Bidikmisi Scholarship (2016–2020) · Programming mentor for junior students (2017–2019).",
+  },
+];
+
+export const certifications = [
+  { name: "Software Engineer Golang", issuer: "eFishery Academy", date: "Jun 2022" },
+  { name: "Problem Solving (Basic)", issuer: "HackerRank", date: "Mar 2022" },
+  { name: "Online Frontend Coding Training", issuer: "Progate Indonesia", date: "Nov 2020" },
 ];
 
 export const projects = [
