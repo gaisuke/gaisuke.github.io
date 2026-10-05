@@ -1,40 +1,27 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import { reflections, profile } from "@/lib/data";
 
+type Reflection = (typeof reflections)[number];
+
+// Deterministic rotation: pick 3 articles that change daily, computed at
+// build/render time so there is no client-side state and no layout shift.
+function pickDaily(items: Reflection[], count: number) {
+    const day = Math.floor(Date.now() / 86_400_000);
+    const start = day % items.length;
+    return Array.from(
+        { length: Math.min(count, items.length) },
+        (_, i) => items[(start + i) % items.length],
+    );
+}
+
 export default function Blogs() {
-    const [displayedBlogs, setDisplayedBlogs] = useState<typeof reflections>([]);
-
-    useEffect(() => {
-        // Randomly shuffle all articles and take exactly 3
-        const shuffled = [...reflections].sort(() => 0.5 - Math.random()).slice(0, 3);
-        setDisplayedBlogs(shuffled);
-    }, []);
-
-    // Render a transparent height skeleton while hydrating to prevent CLS (Layout Shift)
-    if (displayedBlogs.length === 0) {
-        return (
-            <section id="writing" className="max-w-2xl mx-auto py-12 border-t border-zinc-100">
-                <h2 className="text-xs font-medium uppercase tracking-widest text-zinc-400 mb-8">
-                    REFLECTIONS
-                </h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 opacity-0">
-                    {[1, 2, 3].map((i) => (
-                        <div key={i} className="h-32" />
-                    ))}
-                </div>
-                <div className="mt-12 h-4 w-48 opacity-0" />
-            </section>
-        );
-    }
+    const displayedBlogs = pickDaily(reflections, 3);
 
     return (
-        <section id="writing" className="max-w-2xl mx-auto py-12 border-t border-zinc-100">
+        <section id="writing" className="max-w-2xl mx-auto py-12 border-t border-zinc-100 scroll-mt-20">
             <h2 className="text-xs font-medium uppercase tracking-widest text-zinc-400 mb-8">
                 REFLECTIONS
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 transition-opacity duration-500 opacity-100">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
                 {displayedBlogs.map((reflection) => (
                     <div key={reflection.title} className="group flex flex-col justify-between">
                         <div>

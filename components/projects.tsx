@@ -2,7 +2,7 @@ import { projects } from "@/lib/data";
 
 export default function Projects() {
     return (
-        <section id="projects" className="max-w-2xl mx-auto py-12 border-t border-zinc-100">
+        <section id="projects" className="max-w-2xl mx-auto py-12 border-t border-zinc-100 scroll-mt-20">
             <h2 className="text-xs font-medium uppercase tracking-widest text-zinc-400 mb-8">
                 Projects
             </h2>
@@ -19,6 +19,7 @@ export default function Projects() {
                                 {project.name} ↗
                             </a>
                         </div>
+                        <p className="text-xs text-zinc-400 mb-2">{project.subtitle}</p>
                         <p className="text-sm text-zinc-500 leading-relaxed mb-3">
                             {project.description}
                         </p>

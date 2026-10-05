@@ -14,13 +14,13 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Akhmad Dani Munif — Software Engineer",
-  description: "Backend-focused software engineer with 5 years of experience based in Jakarta, Indonesia.",
+  description: "Backend-focused software engineer with 5 years of experience building scalable backend systems and full-stack applications. AI-native engineer based in Jakarta, Indonesia.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
-      <body className="bg-white text-zinc-900 font-sans antialiased px-6">
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} scroll-smooth`}>
+      <body className="bg-white text-zinc-900 font-sans antialiased px-6" suppressHydrationWarning>
         {children}
       </body>
     </html>
