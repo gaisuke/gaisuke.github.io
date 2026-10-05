@@ -1,7 +1,6 @@
 import { ActivityGrid } from "@/components/activity-grid";
 
 type Language = { name: string; percent: number; text: string };
-type Day = { date: string; total: number };
 
 async function getWakaData() {
     try {

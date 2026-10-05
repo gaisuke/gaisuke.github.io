@@ -9,13 +9,14 @@ export default function Blogs() {
     useEffect(() => {
         // Randomly shuffle all articles and take exactly 3
         const shuffled = [...reflections].sort(() => 0.5 - Math.random()).slice(0, 3);
+        // eslint-disable-next-line react-hooks/set-state-in-effect -- random selection must happen client-side after hydration to avoid SSR mismatch
         setDisplayedBlogs(shuffled);
     }, []);
 
     // Render a transparent height skeleton while hydrating to prevent CLS (Layout Shift)
     if (displayedBlogs.length === 0) {
         return (
-            <section id="writing" className="max-w-2xl mx-auto py-12 border-t border-zinc-100">
+            <section id="writing" className="max-w-2xl mx-auto py-12 border-t border-zinc-100 scroll-mt-20">
                 <h2 className="text-xs font-medium uppercase tracking-widest text-zinc-400 mb-8">
                     REFLECTIONS
                 </h2>
@@ -30,7 +31,7 @@ export default function Blogs() {
     }
 
     return (
-        <section id="writing" className="max-w-2xl mx-auto py-12 border-t border-zinc-100">
+        <section id="writing" className="max-w-2xl mx-auto py-12 border-t border-zinc-100 scroll-mt-20">
             <h2 className="text-xs font-medium uppercase tracking-widest text-zinc-400 mb-8">
                 REFLECTIONS
             </h2>
