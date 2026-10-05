@@ -2,19 +2,31 @@ import { ActivityGrid } from "@/components/activity-grid";
 
 type Language = { name: string; percent: number; text: string };
 
+const LANG_URL = "https://wakatime.com/share/@gaisuke/ec607f20-d4b7-491b-b9d6-f3c771b1d1e7.json";
+const ACTIVITY_URL = "https://wakatime.com/share/@gaisuke/dd3c0e73-82e5-458a-a80b-c1f7487bd6dc.json";
+
+async function fetchJson(url: string, attempts = 2) {
+    for (let attempt = 0; attempt < attempts; attempt++) {
+        try {
+            const res = await fetch(url, {
+                headers: { "User-Agent": "gaisuke.github.io", Accept: "application/json" },
+                signal: AbortSignal.timeout(8000),
+                next: { revalidate: 3600 },
+            });
+            if (!res.ok) throw new Error(`HTTP ${res.status}`);
+            return await res.json();
+        } catch (e) {
+            if (attempt === attempts - 1) throw e;
+        }
+    }
+}
+
 async function getWakaData() {
     try {
-        const [langsRes, activityRes] = await Promise.all([
-            fetch("https://wakatime.com/share/@gaisuke/ec607f20-d4b7-491b-b9d6-f3c771b1d1e7.json", {
-                next: { revalidate: 3600 },
-            }),
-            fetch("https://wakatime.com/share/@gaisuke/dd3c0e73-82e5-458a-a80b-c1f7487bd6dc.json", {
-                next: { revalidate: 3600 },
-            }),
+        const [langs, activity] = await Promise.all([
+            fetchJson(LANG_URL),
+            fetchJson(ACTIVITY_URL),
         ]);
-
-        const langs = await langsRes.json();
-        const activity = await activityRes.json();
 
         return { langs: langs.data, activity: activity.days };
     } catch (e) {

@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} scroll-smooth`}>
-      <body className="bg-white text-zinc-900 font-sans antialiased px-6">
+      <body className="bg-white text-zinc-900 font-sans antialiased px-6" suppressHydrationWarning>
         {children}
       </body>
     </html>
