@@ -19,7 +19,9 @@ export default function Contact() {
                 <div className="flex items-center justify-between border-t border-zinc-100 pt-3">
                     <span className="text-xs text-zinc-400">Phone</span>
                     <a
-                        href={`tel:${profile.phone.replace(/\s/g, "")}`}
+                        href="https://wa.me/6285172220597"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="text-sm text-zinc-600 hover:text-zinc-900 transition-colors"
                     >
                         {profile.phone}

@@ -10,7 +10,7 @@ export default function Hero() {
             <p className="text-zinc-500 mb-6 leading-relaxed text-sm">{profile.summary}</p>
             <div className="flex flex-wrap gap-x-4 gap-y-2 text-xs text-zinc-500">
                 <span>{profile.location}</span>
-                <a href={`tel:${profile.phone.replace(/\s/g, "")}`} className="hover:text-zinc-900 transition-colors">
+                <a href="https://wa.me/6285172220597" target="_blank" rel="noopener noreferrer" className="hover:text-zinc-900 transition-colors">
                     {profile.phone}
                 </a>
                 <a href={`mailto:${profile.email}`} className="hover:text-zinc-900 transition-colors">
